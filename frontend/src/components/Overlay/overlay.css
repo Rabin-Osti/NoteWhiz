@@ -1,0 +1,119 @@
+.container {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+.overlay-inner {
+  background-color: #ef61c7;
+  padding: 2rem 3rem;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  position: relative;
+}
+.input-field input,
+textarea {
+  width: 50vw;
+  height: 50px;
+  border-radius: 6px;
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  outline: none;
+}
+@media (max-width: 700px) {
+  .input-field input,
+  textarea {
+    width: 80vw;
+  }
+}
+.input-field textarea {
+  resize: none;
+  height: auto;
+  padding-top: 1rem;
+}
+.input-field textarea::-webkit-input-placeholder {
+  color: white;
+}
+.input-field textarea:-moz-placeholder {
+  color: white;
+}
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 2rem;
+  pointer-events: none;
+  transition: 0.3s;
+}
+input:focus ~ label {
+  top: 0;
+  left: 15px;
+  font-size: 16px;
+  padding: 0 4px;
+  background: transparent;
+  background-color: #ef61c7;
+}
+
+.input-field .active {
+  top: 0;
+  left: 15px;
+  font-size: 16px;
+  padding: 0 4px;
+  background: transparent;
+  background-color: #ef61c7;
+}
+
+.change-btn {
+  background-color: white;
+  color: var(--text-primary);
+  transition: all 0.1s ease;
+}
+.change-btn:hover {
+  color: var(--primary-clr);
+  background-color: white;
+}
+.overlay-top {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.overlay-top h3 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: white;
+}
+.icon-wrapper {
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay-icon {
+  color: var(--primary-clr);
+  width: 18px;
+  height: 18px;
+}
+.icon-wrapper:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,53 @@
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pag-icon {
+  font-size: 30px;
+  transition: all 0.1s ease;
+  color: #9096b2;
+}
+.pag-icon:hover {
+  color: var(--primary-clr);
+  cursor: pointer;
+}
+
+.numberButton {
+  font-size: 2rem;
+  background-color: white;
+  transition: all 0.1s ease;
+  border: none;
+}
+.numberButton span{
+  cursor: pointer;
+}
+
+.pag-outer {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer:hover {
+  cursor: pointer;
+  color: var(--primary-clr);
+}
+.pag-change {
+  /* padding: 1rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-clr);
+  color: white;
+  font-size: 1.6rem;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+

@@ -1,0 +1,26 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.grid-item {
+  min-height: 350px;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 3rem;
+}
+
+@keyframes skeletonLoading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+.loading-effect {
+  animation: skeletonLoading 1s linear infinite;
+}

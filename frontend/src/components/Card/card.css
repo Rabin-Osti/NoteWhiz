@@ -1,0 +1,107 @@
+.card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  border-radius: 3rem;
+  background: rgba(232, 28, 76, 0.7);
+  color: white;
+  height: 300px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.1s ease;
+  position: relative;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.card-title {
+  font-weight: 500;
+  font-size: 2.4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+}
+.card-top {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+@media (max-width:500px) {
+  .card-top{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  .card-title{
+    max-width: 80%;
+  }
+}
+.card-tagline {
+  padding: 0 2rem;
+  border-radius: 3rem;
+  line-height: 220%;
+  background-color: white;
+  color: rgba(232, 28, 76, 0.7);
+}
+.card-tagline h3 {
+  font-weight: 500;
+}
+.card-note {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  font-size: 1.6rem;
+}
+.card-hide {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.card-show {
+  display: block;
+  opacity: 1;
+}
+.card-middle {
+  flex: 6;
+}
+.card-icon,
+.pin {
+  width: 25px;
+  height: 25px;
+  color: white;
+}
+.card-icon:hover {
+  cursor: pointer;
+  color: var(--text-primary);
+}
+.card-bottom {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.card-icon-show {
+  display: block;
+  opacity: 1 !important;
+}
+.pin {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.1s ease;
+  z-index: 5;
+}
+.pin-active {
+  color: yellow;
+}
+.pin:hover {
+  color: yellow;
+  cursor: pointer;
+}

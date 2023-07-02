@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-family: "Plus Jakarta Sans", sans-serif;
+
+  --primary-clr: #fb2e86;
+  --text-primary: #151875;
+  --text-black: #2a2b30;
+  --text-black-light: #444655;
+  --text-light: #a8aabc;
+  --white-clr: #f8f9ff;
+  --light-clr: #e6f4f1;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+button {
+  font-family: inherit;
+}
+
+textarea::-webkit-scrollbar {
+  width: 5px;
+}
+
+textarea::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.message {
+  width: max-content;
+  padding: 0.4em;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.primary-btn {
+  width: fit-content;
+  height: 4.4rem;
+  padding: 0px 2rem;
+  border-radius: 0.4rem;
+  background: var(--primary-clr);
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  transition: all 0.1s ease;
+}
+
+@media (max-width: 450px) {
+  .primary-btn {
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    height: 4rem;
+  }
+  .wrapper {
+    gap: 2rem;
+  }
+}
+
+.primary-btn:hover {
+  background-color: var(--text-primary);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  cursor: pointer;
+  transform: translateY(-1px);
+}

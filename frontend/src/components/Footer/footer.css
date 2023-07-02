@@ -1,0 +1,25 @@
+.footer {
+  background-color: var(--text-primary);
+  color: white;
+  display: flex;
+  padding: 4rem 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.footer h4 {
+  font-size: 3rem;
+  font-weight: normal;
+  font-weight: bolder;
+}
+.footer-middle {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.6rem;
+}
+.footer-bottom {
+  font-size: 1.4rem;
+  max-width: 80%;
+  line-height: 1.5;
+}
