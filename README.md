@@ -2,6 +2,16 @@
 
 NoteWhiz is a full-stack web note taking application built using the MERN (MongoDB, Express, React, Node.js) stack, allowing users to efficiently create, edit, delete, and pin notes. Whether you need to jot down quick ideas, keep track of important tasks, or organize your thoughts, NoteWhiz provides a user-friendly interface to manage your notes seamlessly.
 
+## Live Demo : 
+
+Check out the live demo of the website <a href="https://notewhiz.netlify.app/">here</a>
+
+## App UI
+
+![notewhiz](https://github.com/Rabin-Osti/NoteWhiz/assets/117830519/524203d6-bb14-485f-963f-fd3157f7ca89)
+
+
+
 ## Features
 
 - **Create Notes**: Users can create new notes by providing a title,tag and content for each note.
