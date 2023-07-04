@@ -39,7 +39,7 @@ NoteWhiz will now be accessible at `http://localhost:5173`.
 
 NoteWhiz utilizes the following technologies:
 
-- **Frontend**: React, Redux, HTML, CSS
+- **Frontend**: React, React Query, HTML, CSS
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **API Testing**: Postman
