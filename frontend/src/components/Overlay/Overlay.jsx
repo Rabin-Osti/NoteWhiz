@@ -45,11 +45,12 @@ function Overlay({ mode, noteToEdit }) {
     },
     onSuccess: () => {
       setOverlay((prev) => ({ ...prev, show: false }));
+      queryClient.invalidateQueries({ queryKey: ["notes"] });
+
       if (mode === "add") {
         toast.success("Note Added!", { style: { fontSize: "1.6rem" } });
       } else {
         toast.success("Note Updated!", { style: { fontSize: "1.6rem" } });
-        queryClient.invalidateQueries({ queryKey: ["notes"] });
       }
     },
   });
