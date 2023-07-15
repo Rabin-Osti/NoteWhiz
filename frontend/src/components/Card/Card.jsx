@@ -61,6 +61,7 @@ function Card({ _id, title, note, tagline, color, pinned }) {
   return (
     <div
       onClick={() => handleEdit(_id)}
+      data-testid="card-container"
       className="card"
       style={{ backgroundColor: color }}
       onMouseEnter={() => setIsHovered(!isHovered)}
@@ -73,7 +74,6 @@ function Card({ _id, title, note, tagline, color, pinned }) {
         </div>
       </div>
       <div className="card-middle">
-    
         <span className="card-note">{note}</span>
       </div>
       <AiFillStar
@@ -90,20 +90,21 @@ function Card({ _id, title, note, tagline, color, pinned }) {
       >
         <BiEdit
           className="card-icon"
-          onClick={(e) =>
-            {
+          onClick={(e) => {
             e.stopPropagation();
 
-            handleEdit(_id)
-            }
-          }
+            handleEdit(_id);
+          }}
         />
-        <MdDelete className="card-icon" onClick={(e) => 
-          {
+        <MdDelete
+        data-testid="card-delete"
+          className="card-icon"
+          onClick={(e) => {
             e.stopPropagation();
 
-            mutation.mutate(_id)
-        }} />
+            mutation.mutate(_id);
+          }}
+        />
       </div>
     </div>
   );

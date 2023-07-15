@@ -48,7 +48,7 @@ function Cards() {
       </div>
     );
   return (
-    <div className="cards-wrapper">
+    <div className="cards-wrapper" data-testid="cards-container">
       <div className="cards">
         {showOverlay && (
           <Overlay setShowOverlay={setShowOverlay} {...editNote} />

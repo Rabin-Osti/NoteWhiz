@@ -71,7 +71,7 @@ function Overlay({ mode, noteToEdit }) {
   };
 
   return (
-    <div className="container" ref={overlayRef} onClick={(e) => closeModal(e)}>
+    <div className="container" ref={overlayRef} onClick={(e) => closeModal(e)} data-testid="overlay-outer">
       <form onSubmit={handleSubmit}>
         <div className="overlay-inner">
           <div className="overlay-top">
@@ -89,6 +89,7 @@ function Overlay({ mode, noteToEdit }) {
               <input
                 type="text"
                 value={data.title}
+                data-testid="title-field"
                 onChange={(e) => handleInput("title", e.target.value)}
               />
               <label className={data.title ? "active" : ""}>Title</label>
@@ -103,6 +104,7 @@ function Overlay({ mode, noteToEdit }) {
             <div className="input-field">
               <input
                 type="text"
+                data-testid="tagline-field"
                 value={data.tagline}
                 onChange={(e) => handleInput("tagline", e.target.value)}
               />
@@ -120,6 +122,7 @@ function Overlay({ mode, noteToEdit }) {
               <textarea
                 rows={7}
                 placeholder="Enter your note"
+                data-testid="note-field"
                 value={data.note}
                 onChange={(e) => handleInput("note", e.target.value)}
               />
@@ -138,7 +141,7 @@ function Overlay({ mode, noteToEdit }) {
               Please try again later.
             </span>
           )}
-          <button className="primary-btn change-btn">
+          <button className="primary-btn change-btn" data-testid="action-btn">
             {mode === "add" ? "Add Note" : "Update Note"}
           </button>
         </div>
