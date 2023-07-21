@@ -4,13 +4,9 @@ import { useQuery } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest";
 import Pagination from "../Pagination/Pagination";
 import Card from "../Card/Card";
-import Overlay from "../Overlay/Overlay";
 import CardsLoading from "../CardsLoading/CardsLoading";
 function Cards() {
   const [pageNumber, setPageNumber] = useState(1);
-  const [showOverlay, setShowOverlay] = useState(false);
-  const [editNote, setEditNote] = useState("");
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pageNumber]);
@@ -31,11 +27,6 @@ function Cards() {
     },
   });
 
-  const handleOverlay = (id) => {
-    setEditNote(() => data.notes.find((ele) => ele._id === id));
-    setShowOverlay(true);
-  };
-
   if (isLoading) return <CardsLoading />;
   if (isError)
     return (
@@ -50,19 +41,9 @@ function Cards() {
   return (
     <div className="cards-wrapper" data-testid="cards-container">
       <div className="cards">
-        {showOverlay && (
-          <Overlay setShowOverlay={setShowOverlay} {...editNote} />
-        )}
-
         {data.notes.map((note, index) => {
           return (
-            <Card
-              {...note}
-              key={note._id}
-              color={colors[index]}
-              pageNumber
-              handleOverlay={handleOverlay}
-            />
+            <Card {...note} key={note._id} color={colors[index]} pageNumber />
           );
         })}
       </div>
